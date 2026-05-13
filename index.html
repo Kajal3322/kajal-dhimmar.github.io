@@ -457,7 +457,7 @@ footer span{color:var(--green-dark);opacity:.6}
       </div>
       <div class="stat-box">
         <div class="stat-num" id="s4">0<em>%</em></div>
-        <div class="stat-lbl">Forecast Accuracy Gain</div>
+        <div class="stat-lbl">SKU Base Reduced</div>
         <div class="mini-chart"><div class="mc-bar" style="height:45%"></div><div class="mc-bar" style="height:68%"></div><div class="mc-bar" style="height:88%"></div><div class="mc-bar" style="height:100%"></div></div>
       </div>
     </div>
@@ -475,9 +475,9 @@ footer span{color:var(--green-dark);opacity:.6}
   <h2 class="sec-title reveal">The analyst<br/>behind the <span>data</span></h2>
   <div class="about-wrap">
     <div class="about-text reveal">
-      <p>I'm a supply and demand planning analyst with a rare stack: <strong>two Master's degrees</strong> — Computer Science (Data Analytics) and Mathematics (Operations Research). I don't just report numbers. I find the <strong>signal</strong> in the noise and turn it into a plan leadership can act on.</p>
-      <p>At Design for Health I owned <span class="hl">7,000+ SKUs</span> across <span class="hl">6 channels</span> in Anaplan, improved forecast accuracy by <strong>~15%</strong> through systematic WMAPE/MAPE analysis, and contributed to <strong>$138M</strong> in annual revenue planning. I built the company's first SKU-level budgeting framework from scratch.</p>
-      <p>My edge: I'm as comfortable in a SQL editor writing aggregation queries as I am presenting variance analysis to leadership. I build things that <strong>actually get used</strong>.</p>
+      <p>I came to supply chain planning through an unusual door — a Master's in <strong>Operations Research</strong>, then another in <strong>Data Analytics</strong>. Most planners think in spreadsheets. I think in systems. That changes how I see a problem.</p>
+      <p>I'm most useful in the gap between <strong>raw data and a decision</strong>. Where someone has a forecast that isn't working and doesn't know why. Where a planning process exists but nobody trusts the output. That's where I dig in — not just to fix the number, but to understand the system producing it.</p>
+      <p>Outside of work I'm drawn to <span class="hl">patterns in complexity</span> — which is probably why demand planning felt like a natural fit. Every SKU is a small puzzle. Every variance is a signal worth reading.</p>
     </div>
     <div class="reveal">
       <div style="font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:16px">Skill Matrix</div>
@@ -538,12 +538,13 @@ footer span{color:var(--green-dark);opacity:.6}
         <div class="exp-role">Demand Planning Analyst</div>
         <div class="exp-co">Design for Health</div>
         <div class="exp-bullets">
-          <div class="exp-b">Owned end-to-end S&amp;OP workflows in Anaplan — data prep, validation, and structured delivery across monthly, quarterly, and annual planning cycles.</div>
-          <div class="exp-b">Managed SKU-level planning across 6 channels, integrating statistical models with Sales and Product inputs to balance service, cost, and supply.</div>
-          <div class="exp-b">Improved forecast accuracy by ~15% via systematic WMAPE / MAPE / % Forecast Sold analysis; identified root causes and recommended corrective actions.</div>
-          <div class="exp-b">Cleaned and standardised 7,000+ SKU dataset; eliminated inactive and duplicate records to lift reporting reliability across the planning stack.</div>
-          <div class="exp-b">Delivered validated forecasts into Oracle NetSuite and Sage; contributed to $138M in annual revenue planning.</div>
-          <div class="exp-b">Built Power BI dashboards and the company's first SKU-level budgeting framework; documented SOPs and trained stakeholders.</div>
+          <div class="exp-b">Inherited a forecasting function with no handover — rebuilt it from scratch, learning Anaplan independently, gaining backend access, and restoring a process that had effectively stalled for months.</div>
+          <div class="exp-b">Traced a months-long gap in forecast uploads to files that had never been properly updated or validated. Investigated, cleaned, and restructured data across 7,000+ SKUs to produce the first leadership-approved forecast load in over six months.</div>
+          <div class="exp-b">Reduced the active SKU base from 7,000+ to roughly 4,300 by auditing and discontinuing inactive, duplicate, and obsolete products — improving forecast reliability, inventory allocation, and reporting clarity across all six channels.</div>
+          <div class="exp-b">Working closely with my manager and Anaplan experts, uncovered that the WMAPE metric was being systematically inflated — not by bad forecasting, but by duplicate SKUs and a misconfigured backend formula. Corrected both together, cutting reported forecast error nearly in half and establishing a reliable accuracy baseline for the first time.</div>
+          <div class="exp-b">Built the company's first standardised monthly forecast report covering 5,000+ SKUs across all six channels — shipment history, forward forecast, open orders, backorders, and performance metrics in a single reusable template. Received direct recognition from senior leadership for the improvement in forecasting quality.</div>
+          <div class="exp-b">Maintained a discontinuation tracker monitoring inventory levels against real demand to time SKU exits without creating overstock — and kept the item master accurate so every downstream team was working from the same source of truth.</div>
+          <div class="exp-b">Prepared the data foundation for a Power BI reporting migration and contributed to building the company's first SKU-level budget forecast for the following fiscal year — restructuring and automating datasets that had previously required fully manual handling each cycle.</div>
         </div>
       </div>
     </div>
@@ -678,7 +679,7 @@ window.addEventListener('resize',()=>{resize();mkNodes()});
 /* COUNTERS */
 function count(el,target,prefix,suffix){let v=0,inc=target/(1800/16);const t=setInterval(()=>{v=Math.min(v+inc,target);el.innerHTML=prefix+Math.floor(v)+'<em>'+suffix+'</em>';if(v>=target)clearInterval(t)},16)}
 let counted=false;
-new IntersectionObserver(e=>{if(e[0].isIntersecting&&!counted){counted=true;count(document.getElementById('s1'),2,'','+');count(document.getElementById('s2'),7,'','K+');count(document.getElementById('s3'),138,'$','M');count(document.getElementById('s4'),15,'','%')}},{threshold:.5}).observe(document.getElementById('s1'));
+new IntersectionObserver(e=>{if(e[0].isIntersecting&&!counted){counted=true;count(document.getElementById('s1'),2,'','+');count(document.getElementById('s2'),7,'','K+');count(document.getElementById('s3'),138,'$','M');count(document.getElementById('s4'),38,'','%')}},{threshold:.5}).observe(document.getElementById('s1'));
 
 /* SKILL BARS */
 new IntersectionObserver(e=>{if(e[0].isIntersecting)document.querySelectorAll('.sv-fill').forEach(b=>{b.style.transform=`scaleX(${b.dataset.w})`})},{threshold:.2}).observe(document.getElementById('about'));
